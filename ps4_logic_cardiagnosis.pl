@@ -2,7 +2,7 @@
 % CAR DIAGNOSIS EXPERT SYSTEM
 % -----------------------------
 % This system diagnoses common car issues based on user responses to symptoms.
-% It uses facts to define symptoms and rules to match the symptoms to potential car issues.
+% Used facts to define symptoms and rules to match the symptoms to find potential car issues.
 % -----------------------------
 
 % -----------------------------
@@ -51,10 +51,10 @@ diagnose(brake_failure) :-
     ask('Is the brake warning light on?').
 
 % -----------------------------
-% INTERACTIVE SYMPTOM CHECKER: Asking the user questions
+% INTERACTIVE SYMPTOM CHECKER: Asking the questions
 % -----------------------------
-% The system asks the user yes/no questions about the symptoms.
-% If the response is invalid, it re-asks the same question.
+% The system asks the user y/n questions about the symptoms.
+% If the response is invalid like 'test','10' etc, it re-asks the same question.
 
 ask(Question) :-
     write(Question), nl,
